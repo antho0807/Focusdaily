@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0d0d0f">
+<title>FocusDaily Budget</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  background: #0d0d0f;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+.logo { font-size: 72px; margin-bottom: 20px; }
+h1 { font-size: 32px; margin-bottom: 10px; font-weight: 700; }
+p { font-size: 16px; color: #8a8a8e; margin-bottom: 30px; line-height: 1.6; }
+.button {
+  background: linear-gradient(135deg, #00c47a, #00a868);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 196, 122, 0.4);
+  font-family: inherit;
+}
+.button:hover { opacity: 0.9; }
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0;
+  width: 100%;
+}
+.feature {
+  background: #161618;
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.feature-icon { font-size: 20px; margin-right: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">💰</div>
+  <h1>FocusDaily Budget</h1>
+  <p>Ton suivi budget personnel — sauvegardé automatiquement</p>
+  
+  <div class="features">
+    <div class="feature"><span class="feature-icon">🎯</span> Prévu vs Réal</div>
+    <div class="feature"><span class="feature-icon">📊</span> Analyses visuelles</div>
+    <div class="feature"><span class="feature-icon">📅</span> Vue annuelle</div>
+    <div class="feature"><span class="feature-icon">💾</span> Sauvegarde auto</div>
+  </div>
+
+  <button class="button" onclick="loadApp()">Ouvrir l'app</button>
+  
+  <p style="margin-top: 20px; font-size: 12px; color: #4a4a4f;">
+    Chargement de l'interface...
+  </p>
+</div>
+
+<script>
+function loadApp() {
+  document.body.innerHTML = '<div style="width:100%; height:100vh; display:flex; align-items:center; justify-content:center; background:#0d0d0f;"><div style="text-align:center;"><div style="font-size:48px; margin-bottom:20px;">⏳</div><div style="color:#f0f0f0; font-size:16px; font-weight:600;">Chargement de ton app...</div><div style="color:#8a8a8e; font-size:13px; margin-top:10px;">Cela peut prendre quelques secondes</div></div></div>';
+  
+  // Load the actual app
+  setTimeout(() => {
+    window.location.href = 'https://ac0897.github.io/focusdaily/index.html';
+  }, 1500);
+}
+
+// Auto-load after 3 seconds
+setTimeout(() => {
+  loadApp();
+}, 3000);
+</script>
+</body>
+</html>
